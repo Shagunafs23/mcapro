@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <img src="file:///C:/Users/Shagun/Downloads/MCA%20PROJECT%20SH/logo.svg" alt="Federal Exchange"
+                    class="h-12">
+
+                <div class="relative">
+                    <button id="dropdownBtn" class="text-gray-700 hover:text-blue-900 font-medium focus:outline-none">
+                        PROJECT WORK ▾
+                    </button>
+                    <div id="dropdownMenu" class="absolute hidden bg-white shadow-md rounded-lg py-2 mt-2 w-48">
+                        <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
+                        <a href="Cryptoconvertor.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Cryptocurrency Converter</a>
+                        <a href="service.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Services</a>
+                        <a href="register.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Register</a>
+                        <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About Us</a>
+                        <a href="faq.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('dropdownBtn').addEventListener('click', function () {
+            document.getElementById('dropdownMenu').classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="relative bg-blue-900 text-white py-20 text-center">
+        <h1 class="text-5xl font-bold">About Us</h1>
+        <p class="text-xl mt-4">Discover our mission, values, and the team behind our success.</p>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="max-w-7xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h2 class="text-3xl font-bold">Our Mission</h2>
+            <p class="text-gray-700 mt-4">Our mission is to provide top-quality services that empower individuals and
+                businesses to succeed. We believe in innovation, integrity, and excellence.</p>
+        </div>
+        <img src="mf.jpg" alt="Our Mission" class="rounded-lg shadow-lg">
+    </section>
+
+    <!-- Our Values -->
+    <section class="bg-gray-200 py-16 text-center">
+        <h2 class="text-3xl font-bold mb-6">Our Core Values</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Integrity</h3>
+                <p class="text-gray-600">We uphold honesty and transparency in everything we do.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Innovation</h3>
+                <p class="text-gray-600">We embrace change and constantly seek new ideas.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Customer Focus</h3>
+                <p class="text-gray-600">Our customers are at the heart of our business.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-white text-center">
+        <div class="w-full">
+            <video autoplay muted loop class="w-full h-64 object-cover rounded-lg shadow-md">
+                <source src="vvv.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <!-- Our Team -->
+    <section class="bg-white py-16 text-center">
+        <h2 class="text-3xl font-bold">Meet Me</h2>
+        <p class="text-gray-700 mt-4">A passionate professionals dedicated to delivering excellence.</p>
+        <div class="flex flex-wrap justify-center gap-8 mt-8 mb-8">
+            <div class="bg-gray-200 p-6 rounded-lg shadow-lg w-64 text-center">
+                <h3 class="text-lg font-bold mt-4">Himanshu Rathore</h3>
+                <p class="text-gray-600">Project Maker</p>
+            </div>
+    </section>
+
+    <!-- Interactive Section -->
+    <section class="bg-blue-600 text-white py-16 text-center">
+        <h2 class="text-3xl font-bold">Get to Know Us Better</h2>
+        <p class="mt-4">Click below to take a short quiz and discover how we can help you!</p>
+        <button class="mt-6 bg-white text-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition"
+            onclick="startQuiz()">Take the Quiz</button>
+    </section>
+
+    <!-- Updated: Footer with more navigation links -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Currency Converter Project</h3>
+                    <p class="text-gray-300">A comprehensive solution for global currency conversion.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="service.html" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="register.html" class="text-gray-300 hover:text-white">Register</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Bangalore, India</li>
+                        <li><i class="fas fa-phone mr-2"></i>+91 70179 59638</li>
+                        <li><i class="fas fa-envelope mr-2"></i><a href="mailto:himashurbsmtc10@gmail.com"
+                                class="hover:text-white">himashurbsmtc10@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Working Hours</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Monday - Friday: 9:00 - 18:00</li>
+                        <li>Saturday: 9:00 - 14:00</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 College Project Rights</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function startQuiz() {
+            alert("Coming Soon! Stay Tuned for an Interactive Experience.");
+        }
+    </script>
+</body>
+
+</html>
