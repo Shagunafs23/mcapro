@@ -7,9 +7,15 @@
     <title>Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="team.css">
+    <link rel="icon" href="logo.svg" type="image/png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/CustomEase.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/Flip.min.js"></script>
 </head>
 
 <body class="bg-white">
@@ -28,24 +34,35 @@
         </div>
     </div>
 
-    <!-- Updated: Main navigation with new design -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-20">
-                <img src="logo.svg" alt="Federal Exchange"
-                    class="h-12">
+                <img src="logo.svg" alt="Federal Exchange" class="h-12">
 
-                <div class="relative">
+                <!-- Full nav till 1440px -->
+                <div class="hidden xl:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-900">Home</a>
+                    <a href="Cryptoconvertor.html" class="text-gray-700 hover:text-blue-900">Crypto Converter</a>
+                    <a href="service.html" class="text-gray-700 hover:text-blue-900">Services</a>
+                    <a href="register.html" class="text-gray-700 hover:text-blue-900">Register</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-900">About Us</a>
+                    <a href="assistance.html" class="text-gray-700 hover:text-blue-900">Assistance</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-blue-900">FAQ</a>
+                </div>
+
+                <!-- Dropdown below 1440px -->
+                <div class="xl:hidden relative">
                     <button id="dropdownBtn" class="text-gray-700 hover:text-blue-900 font-medium focus:outline-none">
                         PROJECT WORK ▾
                     </button>
                     <div id="dropdownMenu" class="absolute hidden bg-white shadow-md rounded-lg py-2 mt-2 w-48">
                         <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
-                        <a href="Cryptoconvertor.html"
-                            class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Cryptocurrency Converter</a>
+                        <a href="Cryptoconvertor.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Crypto
+                            Converter</a>
                         <a href="service.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Services</a>
                         <a href="register.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Register</a>
                         <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About Us</a>
+                        <a href="assistance.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Assistance</a>
                         <a href="faq.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">FAQ</a>
                     </div>
                 </div>
@@ -58,8 +75,119 @@
             document.getElementById('dropdownMenu').classList.toggle('hidden');
         });
     </script>
+
+
+    <section class="cloneable">
+        <div data-tabs="wrapper" class="tab-layout">
+            <div class="tab-layout-col">
+                <div class="tab-layout-container">
+                    <div class="tab-container">
+                        <div class="tab-container-top">
+                            <h1 class="tab-layout-heading">Currency Converter MCA Project</h1>
+                            <div data-flip-button="wrap" data-tabs="nav" class="filter-bar"><button data-tabs="button"
+                                    data-flip-button="button" class="filter-button active">
+                                    <div class="filter-button__p">Live Rates</div>
+                                    <div data-flip-button="bg" class="tab-button__bg"></div>
+                                </button><button data-tabs="button" data-flip-button="button" class="filter-button">
+                                    <div class="filter-button__p">Instant Conversion</div>
+                                </button><button data-tabs="button" data-flip-button="button" class="filter-button">
+                                    <div class="filter-button__p">Global Access</div>
+                                </button></div>
+                        </div>
+                        <div class="tab-container-bottom">
+                            <div data-tabs="content-wrap" class="tab-content-wrap">
+                                <div data-tabs="content-item" class="tab-content-item active">
+                                    <h2 data-tabs-fade="" class="tab-content__heading">Track fluctuations</h2>
+                                    <p data-tabs-fade="" class="content-p opacity--80">Track fluctuations instantly for
+                                        informed decisions.</p>
+                                </div>
+                                <div data-tabs="content-item" class="tab-content-item">
+                                    <h2 data-tabs-fade="" class="tab-content__heading">Experience seamless transactions
+                                    </h2>
+                                    <p data-tabs-fade="" class="content-p opacity--80">Experience seamless transactions
+                                        with no delays.</p>
+                                </div>
+                                <div data-tabs="content-item" class="tab-content-item">
+                                    <h2 data-tabs-fade="" class="tab-content__heading">Convert currencies</h2>
+                                    <p data-tabs-fade="" class="content-p opacity--80">Explore diverse markets with
+                                        universal currency support.</p>
+                                </div>
+                            </div>
+                            <a id="form-button" href="#" class="tab-content__button w-inline-block">
+                                <p class="content-p">Try Now</p>
+                                <div class="content-button__bg"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-layout-col">
+                <div data-tabs="visual-wrap" class="tab-visual-wrap">
+                    <div data-tabs="visual-item" class="tab-visual-item active">
+                        <video autoplay muted loop playsinline class="tab-video">
+                            <source src="lr.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div data-tabs="visual-item" class="tab-visual-item">
+                        <video autoplay muted loop playsinline class="tab-video">
+                            <source src="cv.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div data-tabs="visual-item" class="tab-visual-item">
+                        <video autoplay muted loop playsinline class="tab-video">
+                            <source src="df.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="stock-ticker">
+        <ul>
+            <li class="minus"><span class="company">BTC</span> <span class="price">$67.150</span> <span
+                    class="change">-0.39% (-0.75% 24h)</span></li>
+            <li class="plus"><span class="company">ETH</span> <span class="price">$2.631</span> <span
+                    class="change">+0.29 (-2.68%)</span></li>
+            <li class="plus"><span class="company">USDT</span> <span class="price">$0.999</span> <span
+                    class="change">+0.01 (+0.03%)</span></li>
+            <li class="plus"><span class="company">BNB</span> <span class="price">$592.05</span> <span
+                    class="change">+0.42 (+2.54%)</span></li>
+            <li class="minus"><span class="company">SOL</span> <span class="price">$166.47</span> <span
+                    class="change">-0.89 (-0.28%)</span></li>
+            <li class="plus"><span class="company">USDC</span> <span class="price">$487.05</span> <span
+                    class="change">+5.31 (+1.10%)</span></li>
+            <li class="minus"><span class="company">XRP</span> <span class="price">$0.535</span> <span
+                    class="change">-3.82 (-1.63%)</span></li>
+            <li class="minus"><span class="company">DOGE</span> <span class="price">$0.143</span> <span
+                    class="change">-0.33 (-0.95%)</span></li>
+        </ul>
+        <ul aria-hidden="true">
+            <li class="minus"><span class="company">BTC</span> <span class="price">$67.150</span> <span
+                    class="change">-0.39% (-0.75% 24h)</span></li>
+            <li class="plus"><span class="company">ETH</span> <span class="price">$2.631</span> <span
+                    class="change">+0.29 (-2.68%)</span></li>
+            <li class="plus"><span class="company">USDT</span> <span class="price">$0.999</span> <span
+                    class="change">+0.01 (+0.03%)</span></li>
+            <li class="plus"><span class="company">BNB</span> <span class="price">$592.05</span> <span
+                    class="change">+0.42 (+2.54%)</span></li>
+            <li class="minus"><span class="company">SOL</span> <span class="price">$166.47</span> <span
+                    class="change">-0.89 (-0.28%)</span></li>
+            <li class="plus"><span class="company">USDC</span> <span class="price">$487.05</span> <span
+                    class="change">+5.31 (+1.10%)</span></li>
+            <li class="minus"><span class="company">XRP</span> <span class="price">$0.535</span> <span
+                    class="change">-3.82 (-1.63%)</span></li>
+            <li class="minus"><span class="company">DOGE</span> <span class="price">$0.143</span> <span
+                    class="change">-0.33 (-0.95%)</span></li>
+        </ul>
+    </div>
+
     <!-- Added: Hero section with background image -->
-    <section class="relative h-[600px] bg-cover bg-center">
+    <section id="home" class="relative h-[600px] bg-cover bg-center">
         <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
             <source src="vv.mp4" type="video/mp4">
         </video>
@@ -76,7 +204,7 @@
     </section>
 
     <!-- Updated: Exchange rate calculator with new design -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="bg-white rounded-xl shadow-lg p-8" id="curr">
                 <h2 class="text-3xl font-bold mb-6 text-blue-900">Currency Calculator</h2>
@@ -107,77 +235,93 @@
         </div>
     </section>
 
-    <!-- Added: Services section -->
     <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <i class="fas fa-exchange-alt text-4xl text-blue-900 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Currency Exchange</h3>
-                    <p class="text-gray-600">Best rates for all major world currencies</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <i class="fas fa-money-bill-wave text-4xl text-blue-900 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Money Transfer</h3>
-                    <p class="text-gray-600">Fast and secure international transfers</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <i class="fas fa-coins text-4xl text-blue-900 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Wholesale Currency</h3>
-                    <p class="text-gray-600">Bulk currency exchange for businesses</p>
-                </div>
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10 px-6">
+            <div class="p-6 bg-white shadow-lg rounded-2xl text-center">
+                <img src="cc.jpg" alt="Currency Exchange" class="rounded-2xl mb-4">
+                <h3 class="text-xl font-semibold">Currency Exchange</h3>
+                <p class="text-gray-600 mt-2">Exchange currencies at the best rates with secure and transparent
+                    transactions.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-2xl text-center">
+                <img src="wt.jpg" alt="Wire Transfers" class="rounded-2xl mb-4">
+                <h3 class="text-xl font-semibold">Wire Transfers</h3>
+                <p class="text-gray-600 mt-2">Send money worldwide efficiently, ensuring quick and safe transfers every
+                    time.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-2xl text-center">
+                <img src="ft.jpg" alt="Forex Trading" class="rounded-2xl mb-4">
+                <h3 class="text-xl font-semibold">Forex Trading</h3>
+                <p class="text-gray-600 mt-2">Get expert guidance and insights on forex trading to maximize your
+                    returns.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-2xl text-center">
+                <img src="ccc.jpg" alt="Cryptocurrency Exchange" class="rounded-2xl mb-4">
+                <h3 class="text-xl font-semibold">Cryptocurrency Exchange</h3>
+                <p class="text-gray-600 mt-2">Buy and sell cryptocurrencies with our secure and easy-to-use platform.
+                </p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-2xl text-center">
+                <img src="rs.jpg" alt="Remittance Services" class="rounded-2xl mb-4">
+                <h3 class="text-xl font-semibold">Remittance Services</h3>
+                <p class="text-gray-600 mt-2">Send remittances quickly, safely, and at the most competitive exchange
+                    rates.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-2xl text-center">
+                <img src="i.jpg" alt="Investment Consultation" class="rounded-2xl mb-4">
+                <h3 class="text-xl font-semibold">Investment Consultation</h3>
+                <p class="text-gray-600 mt-2">Get personalized investment advice to grow and manage your financial
+                    assets.</p>
             </div>
         </div>
+        <div class="text-center mt-10">
+            <a href="service.html"
+                class="px-6 py-3 bg-#1e3a8a-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700">Explore
+                More Services</a>
+        </div>
     </section>
+
+
+
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-3xl font-bold text-center mb-12 text-blue-900">Currency Trends Tracker</h1>
             <p class="text-gray-600">Monitor and analyze real-time currency exchange rates</p>
         </header>
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
-            <div class="lg:col-span-1 space-y-4">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-lg font-semibold mb-4">Currency Pair</h2>
-                    <select id="currencyPair"
-                        class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                        <option value="USD/EUR" selected>USD/EUR</option>
-                        <option value="EUR/USD">EUR/USD</option>
-                        <option value="GBP/USD">GBP/USD</option>
-                        <option value="USD/JPY">USD/JPY</option>
-                        <option value="USD/CHF">USD/CHF</option>
-                    </select>
-
-                    <h2 class="text-lg font-semibold mt-6 mb-4">Time Range</h2>
-                    <div class="space-y-2">
-                        <button
-                            class="px-3 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-blue-100 hover:text-blue-600 active:bg-blue-200 focus:ring-2 focus:ring-blue-500">7
-                            Days</button>
-                        <button
-                            class="px-3 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-blue-100 hover:text-blue-600 active:bg-blue-200 focus:ring-2 focus:ring-blue-500">1
-                            Month</button>
-                        <button
-                            class="px-3 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-blue-100 hover:text-blue-600 active:bg-blue-200 focus:ring-2 focus:ring-blue-500">3
-                            Months</button>
-                        <button
-                            class="px-3 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-blue-100 hover:text-blue-600 active:bg-blue-200 focus:ring-2 focus:ring-blue-500">6
-                            Months</button>
-                        <button
-                            class="px-3 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-blue-100 hover:text-blue-600 active:bg-blue-200 focus:ring-2 focus:ring-blue-500">1
-                            Year</button>
-                    </div>
-                </div>
+        <section class="tradingview-section">
+            <div class="tradingview-widget-container" id="tradingview_0b60e">
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        width: "100%",
+                        height: window.innerHeight,
+                        symbol: "COINBASE:BTCUSD",
+                        interval: "1",
+                        timezone: "Etc/UTC",
+                        theme: "dark",
+                        style: "1",
+                        locale: "en",
+                        toolbar_bg: "#f1f3f6",
+                        enable_publishing: false,
+                        hide_side_toolbar: false,
+                        allow_symbol_change: true,
+                        details: true,
+                        studies: [
+                            "BB@tv-basicstudies",
+                            "Volume@tv-basicstudies",
+                            "VWAP@tv-basicstudies"
+                        ],
+                        container_id: "tradingview_0b60e"
+                    });
+                </script>
             </div>
-
-            <div class="lg:col-span-3">
-                <div class="bg-white p-6 rounded-lg shadow-md h-[600px]">
-                    <h2 class="text-xl font-semibold">Exchange Rate Chart</h2>
-                    <canvas id="currencyChart" class="w-full h-[500px]"></canvas>
-                </div>
-            </div>
-        </div>
-
+            <!-- TradingView Widget END -->
+        </section>
     </div>
+
+
+
     <!-- Testimonials Section -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
@@ -199,6 +343,123 @@
                     <h3 class="mt-4 font-bold">- Michael Lee</h3>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="section-wrapper">
+            <header class="header">
+                <hgroup class="hgroup">
+                    <h2 class="headline">Meet Our Team!</h2>
+
+                    <p>Innovation, collaboration, and passion drive our diverse<br /> team. Meet the visionaries behind
+                        our
+                        success.</p>
+                </hgroup>
+            </header>
+            <ul class="cards" style="--nth-siblings: 5">
+                <li class="card" style="--nth-child: 1">
+                    <a href="#" class="avatar-link-wrapper">
+                        <div class="visual">
+                            <img class="avatar-img"
+                                src="https://raw.githubusercontent.com/mobalti/modern-web-ui/refs/heads/main/css-trig-functions/images/img-1.avif"
+                                width="144" height="144" alt="Himanshu Rathore, DevOps Engineer" />
+                        </div>
+                        <div class="tooltiptext">
+                            <h3 class="team-name">Himanshu Rathore</h3>
+                            <div class="team-content-wrapper">
+                                <p class="team-title">Software Developer</p>
+                                <p class="team-bio">Master of servers, pipelines, and ensuring smooth digital
+                                    operations.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="card" style="--nth-child: 2">
+                    <a href="#" class="avatar-link-wrapper">
+                        <div class="visual">
+                            <img class="avatar-img" src="sh.png" width="144" height="144"
+                                alt="Shagun Verma, UI/UX Designer" />
+                        </div>
+                        <div class="tooltiptext">
+                            <h3 class="team-name">Shagun Mishra</h3>
+                            <div class="team-content-wrapper">
+                                <p class="team-title">Software Developer</p>
+                                <p class="team-bio">Transforming concepts into elegant user experiences with precision
+                                    and creativity.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="card" style="--nth-child: 3">
+                    <a href="#" class="avatar-link-wrapper">
+                        <div class="visual">
+                            <img class="avatar-img"
+                                src="https://raw.githubusercontent.com/mobalti/modern-web-ui/refs/heads/main/css-trig-functions/images/img-3.avif"
+                                width="144" height="144" alt="Arjun Nair, Mobile Developer" />
+                        </div>
+                        <div class="tooltiptext">
+                            <h3 class="team-name">Arjun Nair</h3>
+                            <div class="team-content-wrapper">
+                                <p class="team-title">Mobile Developer</p>
+                                <p class="team-bio">Building intuitive mobile apps that bridge technology and user needs
+                                    seamlessly.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="card" style="--nth-child: 4">
+                    <a href="#" class="avatar-link-wrapper">
+                        <div class="visual">
+                            <img class="avatar-img"
+                                src="https://raw.githubusercontent.com/mobalti/modern-web-ui/refs/heads/main/css-trig-functions/images/img-4.avif"
+                                width="144" height="144" alt="Priya Iyer, Data Scientist" />
+                        </div>
+                        <div class="tooltiptext">
+                            <h3 class="team-name">Priya Iyer</h3>
+                            <div class="team-content-wrapper">
+                                <p class="team-title">Data Scientist</p>
+                                <p class="team-bio">Unraveling complex datasets to discover meaningful insights and
+                                    patterns.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="card" style="--nth-child: 5">
+                    <a href="#" class="avatar-link-wrapper">
+                        <div class="visual">
+                            <img class="avatar-img"
+                                src="https://raw.githubusercontent.com/mobalti/modern-web-ui/refs/heads/main/css-trig-functions/images/img-5.avif"
+                                width="144" height="144" alt="Codey X, AI Code Assistant" />
+                        </div>
+                        <div class="tooltiptext">
+                            <h3 class="team-name">Codey X</h3>
+                            <div class="team-content-wrapper">
+                                <p class="team-title">AI Code Assistant</p>
+                                <p class="team-bio">Powered by algorithms, driven by collaboration.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="card" style="--nth-child: 6">
+                    <a href="#" class="avatar-link-wrapper">
+                        <div class="visual">
+                            <img class="avatar-img"
+                                src="https://raw.githubusercontent.com/mobalti/modern-web-ui/refs/heads/main/css-trig-functions/images/img-6.avif"
+                                width="144" height="144" alt="Neha Sharma, Project Manager" />
+                        </div>
+                        <div class="tooltiptext">
+                            <h3 class="team-name">Neha Sharma</h3>
+                            <div class="team-content-wrapper">
+                                <p class="team-title">Project Manager</p>
+                                <p class="team-bio">Orchestrating projects with a blend of strategy, coordination, and
+                                    empathy.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -225,33 +486,15 @@
         </div>
     </section>
     <div class="fixed bottom-5 right-5">
-        <!-- Chatbot Button -->
-        <button id="chatbot-toggle" class="bg-blue-600 text-white p-3 rounded-full shadow-lg">
-            Himanshu's BOT
-        </button>
-        <!-- Chatbot UI -->
-        <div id="chatbot-container" class="hidden bg-white shadow-lg rounded-lg w-80 h-96 p-4">
-            <div class="flex justify-between items-center border-b pb-2">
-                <h3 class="text-lg font-semibold">Himanshu's Bot</h3>
-                <button id="chatbot-close" class="text-gray-500 hover:text-red-600">&times;</button>
-            </div>
-            <div id="chatbot-messages" class="mt-4 overflow-y-auto h-64">
-                <!-- Initial Greeting -->
-                <div class="text-left my-2">
-                    <span class="bg-gray-200 text-black p-2 rounded-lg inline-block">
-                        Hi, I am Himanshu's BOT!<br>
-                        Do you need any help?
-                    </span>
-                </div>
-            </div>
-            <form id="chatbot-form" class="mt-4 flex">
-                <input type="text" id="chatbot-input" class="flex-1 border rounded-l-lg p-2"
-                    placeholder="Type your reply...">
-                <button type="submit" class="bg-blue-600 text-white px-4 rounded-r-lg">Send</button>
-            </form>
-        </div>
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/7060783267" target="_blank"
+            class="bg-green-500 text-white p-3 rounded-full shadow-lg flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="w-6 h-6 mr-2">
+            Chat on WhatsApp
+        </a>
     </div>
-    <!-- Updated: Footer with more navigation links -->
+
     <footer class="bg-blue-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -460,58 +703,247 @@
         const chatbotContainer = document.getElementById('chatbot-container');
         const chatbotClose = document.getElementById('chatbot-close');
 
-        chatbotToggle.addEventListener('click', () => {
-            chatbotContainer.classList.toggle('hidden');
-        });
+        if (chatbotToggle && chatbotContainer && chatbotClose) {
+            chatbotToggle.addEventListener('click', () => {
+                chatbotContainer.classList.toggle('hidden');
+            });
 
-        chatbotClose.addEventListener('click', () => {
-            chatbotContainer.classList.add('hidden');
-        });
+            chatbotClose.addEventListener('click', () => {
+                chatbotContainer.classList.add('hidden');
+            });
+        }
 
         // Chatbot Message Handler
         const chatbotForm = document.getElementById('chatbot-form');
         const chatbotMessages = document.getElementById('chatbot-messages');
-        let conversationStep = 0; // Track the conversation step
+        const chatbotInput = document.getElementById('chatbot-input');
 
-        chatbotForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const userMessage = document.getElementById('chatbot-input').value.trim();
-            if (userMessage !== '') {
-                // Display user's message
-                chatbotMessages.innerHTML += `
-          <div class="text-right my-2">
-            <span class="bg-blue-500 text-white p-2 rounded-lg inline-block">${userMessage}</span>
-          </div>
-        `;
-                document.getElementById('chatbot-input').value = '';
+        if (chatbotForm && chatbotMessages && chatbotInput) {
+            let conversationStep = 0; // Track the conversation step
 
-                // Bot Response Logic
-                setTimeout(() => {
-                    let botMessage = '';
+            const responses = {
+                greetings: ["Hello! How can I assist you today?", "Hi there! What can I do for you?", "Hey! Need any help?"],
+                thanks: ["You're welcome! If you need anything else, let me know.", "Glad I could help!", "Anytime!"],
+                assistance: ["Sure! Please send your query in brief to:<br><strong>+91 70179 59638</strong><br><strong>himashurbsmtc10@gmail.com</strong><br>We will contact you back shortly.", "I’d be happy to help! Please provide more details."],
+                contact: ["You can reach us at:<br><strong>Phone:</strong> +91 70179 59638<br><strong>Email:</strong> himashurbsmtc10@gmail.com"],
+                project: ["We are working on a currency converter PHP plugin, integrating it into a website using HTML and CSS. Let me know if you want more details!", "This project is part of an MCA project created by Himanshu Rathore, focusing on financial solutions with a user-friendly interface for real-time currency conversion."],
+                currency: ["For the latest currency updates, please visit our website or contact us directly.", "The website provides real-time currency conversion and finance-related insights to help users stay updated on global exchange rates."],
+                fallback: ["I'm here if you need further assistance.", "Could you clarify that?", "I didn't quite get that, could you rephrase?"],
+                conversationSkills: [
+                    "Tell me about your project.", "What technologies are used in the project?", "How do I get in touch?", "Where can I find the latest currency rates?", "Can you provide more details on the currency converter?",
+                    "Who developed this project?", "Is this project open-source?", "How does the PHP plugin work?", "Can I contribute to the project?", "What inspired this project?",
+                    "What’s the response time for queries?", "Is there a mobile app?", "How often are currency rates updated?", "Can I use this plugin on my website?", "What’s the future roadmap?",
+                    "Does it support multiple languages?", "Can I integrate it with other finance tools?", "Is there a demo available?", "How secure is the plugin?", "What makes this converter unique?",
+                    "Can I track historical currency data?", "Is it free to use?", "Do you offer API access?", "What browsers are supported?", "Does it work offline?",
+                    "How do I install the plugin?", "Can I customize the UI?", "Does it support cryptocurrencies?", "Can I get alerts for rate changes?", "How can I report bugs?",
+                    "Is there a community forum?", "Can I export data?", "Are there any tutorials?", "What data sources are used?", "Can I add favorite currencies?",
+                    "Does it handle currency conversion fees?", "How accurate are the rates?", "Is there a light/dark mode?", "What kind of customer support is available?", "Can I set up recurring conversions?",
+                    "What countries are supported?", "Is there a widget for blogs?", "Does it show real-time data?", "How do I reset my preferences?", "Are there any ads?",
+                    "Can I integrate this with Excel?", "What happens if the data source is down?", "Does it handle large-scale requests?", "How do I provide feedback?", "Can I use this for business analytics?"
+                ]
+            };
 
-                    if (conversationStep === 0) {
-                        botMessage = `Please send your query in brief to:<br>
-                          <strong>+91 70179 59638</strong><br>
-                          <strong>himashurbsmtc10@gmail.com</strong><br>
-                          We will contact you back shortly.`;
-                        conversationStep++;
-                    } else if (conversationStep === 1) {
-                        botMessage = 'Thank you! Have a great day!';
-                        conversationStep++;
-                    } else {
-                        botMessage = 'I am here if you need further assistance.';
-                    }
-
-                    chatbotMessages.innerHTML += `
-            <div class="text-left my-2">
-              <span class="bg-gray-200 text-black p-2 rounded-lg inline-block">${botMessage}</span>
-            </div>
-          `;
-                    chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to the bottom
-                }, 1000);
+            function getRandomResponse(category) {
+                const options = responses[category];
+                return options[Math.floor(Math.random() * options.length)];
             }
+
+            function appendMessage(message, isUser = false) {
+                const messageClass = isUser ? 'bg-blue-500 text-white text-right' : 'bg-gray-200 text-black text-left';
+                chatbotMessages.innerHTML += `
+            <div class="my-2 ${isUser ? 'text-right' : 'text-left'}">
+                <span class="${messageClass} p-2 rounded-lg inline-block">${message}</span>
+            </div>
+        `;
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to the bottom
+            }
+
+            chatbotForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const userMessage = chatbotInput.value.trim();
+
+                if (userMessage !== '') {
+                    appendMessage(userMessage, true);
+                    chatbotInput.value = '';
+
+                    // Simulate typing indicator
+                    setTimeout(() => {
+                        let botMessage = '';
+                        const lowerCaseMessage = userMessage.toLowerCase();
+
+                        if (lowerCaseMessage.includes('hi') || lowerCaseMessage.includes('hello')) {
+                            botMessage = getRandomResponse('greetings');
+                        } else if (lowerCaseMessage.includes('help') || lowerCaseMessage.includes('support')) {
+                            botMessage = getRandomResponse('assistance');
+                        } else if (lowerCaseMessage.includes('thanks') || lowerCaseMessage.includes('thank you')) {
+                            botMessage = getRandomResponse('thanks');
+                        } else if (lowerCaseMessage.includes('contact') || lowerCaseMessage.includes('phone') || lowerCaseMessage.includes('email')) {
+                            botMessage = getRandomResponse('contact');
+                        } else if (lowerCaseMessage.includes('project') || lowerCaseMessage.includes('currency converter')) {
+                            botMessage = getRandomResponse('project');
+                        } else if (lowerCaseMessage.includes('currency update') || lowerCaseMessage.includes('exchange rate')) {
+                            botMessage = getRandomResponse('currency');
+                        } else {
+                            botMessage = getRandomResponse('fallback');
+                        }
+
+                        appendMessage(botMessage, false);
+                    }, 1000);
+                }
+            });
+        }
+
+
+
+        gsap.registerPlugin(CustomEase, Flip);
+
+        CustomEase.create("osmo-ease", "0.625, 0.05, 0, 1");
+
+        gsap.defaults({
+            ease: "osmo-ease",
+            duration: 0.8
         });
+
+        function initFlipButtons() {
+            let wrappers = document.querySelectorAll('[data-flip-button="wrap"]');
+
+            wrappers.forEach((wrapper) => {
+                let buttons = wrapper.querySelectorAll('[data-flip-button="button"]');
+                let bg = wrapper.querySelector('[data-flip-button="bg"]');
+
+                buttons.forEach(function (button) {
+                    // Handle mouse enter
+                    button.addEventListener("mouseenter", function () {
+                        const state = Flip.getState(bg);
+                        this.appendChild(bg);
+                        Flip.from(state, {
+                            duration: 0.4
+                        });
+                    });
+
+                    // Handle focus for keyboard navigation
+                    button.addEventListener("focus", function () {
+                        const state = Flip.getState(bg);
+                        this.appendChild(bg);
+                        Flip.from(state, {
+                            duration: 0.4
+                        });
+                    });
+
+                    // Handle mouse leave
+                    button.addEventListener("mouseleave", function () {
+                        const state = Flip.getState(bg);
+                        const activeLink = wrapper.querySelector(".active");
+                        activeLink.appendChild(bg);
+                        Flip.from(state, {
+                            duration: 0.4
+                        });
+                    });
+
+                    // Handle blur to reset background for keyboard navigation
+                    button.addEventListener("blur", function () {
+                        const state = Flip.getState(bg);
+                        const activeLink = wrapper.querySelector(".active");
+                        activeLink.appendChild(bg);
+                        Flip.from(state, {
+                            duration: 0.4
+                        });
+                    });
+                });
+            });
+        }
+
+        function initTabSystem() {
+            let wrappers = document.querySelectorAll('[data-tabs="wrapper"]');
+
+            wrappers.forEach((wrapper) => {
+                let nav = wrapper.querySelector('[data-tabs="nav"]');
+                let buttons = nav.querySelectorAll('[data-tabs="button"]');
+                let contentWrap = wrapper.querySelector('[data-tabs="content-wrap"]');
+                let contentItems = contentWrap.querySelectorAll(
+                    '[data-tabs="content-item"]'
+                );
+                let visualWrap = wrapper.querySelector('[data-tabs="visual-wrap"]');
+                let visualItems = visualWrap.querySelectorAll('[data-tabs="visual-item"]');
+
+                let activeButton = buttons[0];
+                let activeContent = contentItems[0];
+                let activeVisual = visualItems[0];
+                let isAnimating = false;
+
+                function switchTab(index, initial = false) {
+                    if (!initial && (isAnimating || buttons[index] === activeButton)) return; // ignore click if the clicked button is already active
+                    isAnimating = true; // keep track of whether or not one is moving, to prevent overlap
+
+                    const outgoingContent = activeContent;
+                    const incomingContent = contentItems[index];
+                    const outgoingVisual = activeVisual;
+                    const incomingVisual = visualItems[index];
+
+                    let outgoingLines =
+                        outgoingContent.querySelectorAll("[data-tabs-fade]") || [];
+                    let incomingLines = incomingContent.querySelectorAll("[data-tabs-fade]");
+
+                    const timeline = gsap.timeline({
+                        defaults: {
+                            ease: "power3.inOut"
+                        },
+                        onComplete: () => {
+                            if (!initial) {
+                                outgoingContent && outgoingContent.classList.remove("active");
+                                outgoingVisual && outgoingVisual.classList.remove("active");
+                            }
+                            activeContent = incomingContent;
+                            activeVisual = incomingVisual;
+                            isAnimating = false;
+                        }
+                    });
+
+                    incomingContent.classList.add("active");
+                    incomingVisual.classList.add("active");
+
+                    timeline
+                        .to(outgoingLines, { y: "-2em", autoAlpha: 0 }, 0)
+                        .to(outgoingVisual, { autoAlpha: 0, xPercent: 3 }, 0)
+                        .fromTo(
+                            incomingLines,
+                            { y: "2em", autoAlpha: 0 },
+                            { y: "0em", autoAlpha: 1, stagger: 0.075 },
+                            0.4
+                        )
+                        .fromTo(
+                            incomingVisual,
+                            { autoAlpha: 0, xPercent: 3 },
+                            { autoAlpha: 1, xPercent: 0 },
+                            "<"
+                        );
+
+                    activeButton && activeButton.classList.remove("active");
+                    buttons[index].classList.add("active");
+                    activeButton = buttons[index];
+                }
+
+                switchTab(0, true); // on page load
+
+                buttons.forEach((button, i) => {
+                    button.addEventListener("click", () => switchTab(i));
+                });
+
+                contentItems[0].classList.add("active");
+                visualItems[0].classList.add("active");
+                buttons[0].classList.add("active");
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            initTabSystem();
+            initFlipButtons();
+        });
+
+
     </script>
+
+
 </body>
 
 </html>

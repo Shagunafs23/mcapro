@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="logo.svg" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
     <style>
         .how-it-works {
             background: linear-gradient(to right, #4facfe, #00f2fe);
@@ -28,20 +31,32 @@
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-20">
-                <img src="file:///C:/Users/Shagun/Downloads/MCA%20PROJECT%20SH/logo.svg" alt="Federal Exchange"
-                    class="h-12">
+                <img src="logo.svg" alt="Federal Exchange" class="h-12">
 
-                <div class="relative">
+                <!-- Full nav till 1440px -->
+                <div class="hidden xl:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-900">Home</a>
+                    <a href="Cryptoconvertor.html" class="text-gray-700 hover:text-blue-900">Crypto Converter</a>
+                    <a href="service.html" class="text-gray-700 hover:text-blue-900">Services</a>
+                    <a href="register.html" class="text-gray-700 hover:text-blue-900">Register</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-900">About Us</a>
+                    <a href="assistance.html" class="text-gray-700 hover:text-blue-900">Assistance</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-blue-900">FAQ</a>
+                </div>
+
+                <!-- Dropdown below 1440px -->
+                <div class="xl:hidden relative">
                     <button id="dropdownBtn" class="text-gray-700 hover:text-blue-900 font-medium focus:outline-none">
                         PROJECT WORK ▾
                     </button>
                     <div id="dropdownMenu" class="absolute hidden bg-white shadow-md rounded-lg py-2 mt-2 w-48">
                         <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
-                        <a href="Cryptoconvertor.html"
-                            class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Cryptocurrency Converter</a>
+                        <a href="Cryptoconvertor.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Crypto
+                            Converter</a>
                         <a href="service.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Services</a>
                         <a href="register.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Register</a>
                         <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About Us</a>
+                        <a href="assistance.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Assistance</a>
                         <a href="faq.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">FAQ</a>
                     </div>
                 </div>
@@ -54,6 +69,7 @@
             document.getElementById('dropdownMenu').classList.toggle('hidden');
         });
     </script>
+
     <section class="relative bg-blue-900 text-white py-20 text-center">
         <h1 class="text-5xl font-bold">Our Services</h1>
         <p class="text-xl mt-4">We provide top-notch financial exchange services tailored to your needs.</p>
@@ -117,6 +133,44 @@
         </div>
     </section>
 
+    <div class="stock-ticker">
+        <ul>
+            <li class="minus"><span class="company">BTC</span> <span class="price">$67.150</span> <span
+                    class="change">-0.39% (-0.75% 24h)</span></li>
+            <li class="plus"><span class="company">ETH</span> <span class="price">$2.631</span> <span
+                    class="change">+0.29 (-2.68%)</span></li>
+            <li class="plus"><span class="company">USDT</span> <span class="price">$0.999</span> <span
+                    class="change">+0.01 (+0.03%)</span></li>
+            <li class="plus"><span class="company">BNB</span> <span class="price">$592.05</span> <span
+                    class="change">+0.42 (+2.54%)</span></li>
+            <li class="minus"><span class="company">SOL</span> <span class="price">$166.47</span> <span
+                    class="change">-0.89 (-0.28%)</span></li>
+            <li class="plus"><span class="company">USDC</span> <span class="price">$487.05</span> <span
+                    class="change">+5.31 (+1.10%)</span></li>
+            <li class="minus"><span class="company">XRP</span> <span class="price">$0.535</span> <span
+                    class="change">-3.82 (-1.63%)</span></li>
+            <li class="minus"><span class="company">DOGE</span> <span class="price">$0.143</span> <span
+                    class="change">-0.33 (-0.95%)</span></li>
+        </ul>
+        <ul aria-hidden="true">
+            <li class="minus"><span class="company">BTC</span> <span class="price">$67.150</span> <span
+                    class="change">-0.39% (-0.75% 24h)</span></li>
+            <li class="plus"><span class="company">ETH</span> <span class="price">$2.631</span> <span
+                    class="change">+0.29 (-2.68%)</span></li>
+            <li class="plus"><span class="company">USDT</span> <span class="price">$0.999</span> <span
+                    class="change">+0.01 (+0.03%)</span></li>
+            <li class="plus"><span class="company">BNB</span> <span class="price">$592.05</span> <span
+                    class="change">+0.42 (+2.54%)</span></li>
+            <li class="minus"><span class="company">SOL</span> <span class="price">$166.47</span> <span
+                    class="change">-0.89 (-0.28%)</span></li>
+            <li class="plus"><span class="company">USDC</span> <span class="price">$487.05</span> <span
+                    class="change">+5.31 (+1.10%)</span></li>
+            <li class="minus"><span class="company">XRP</span> <span class="price">$0.535</span> <span
+                    class="change">-3.82 (-1.63%)</span></li>
+            <li class="minus"><span class="company">DOGE</span> <span class="price">$0.143</span> <span
+                    class="change">-0.33 (-0.95%)</span></li>
+        </ul>
+    </div>
     <section class="py-16 how-it-works max-w-6xl mx-auto mt-16 px-6">
         <h2>How It Works</h2>
         <p class="text-lg">Our process is simple and efficient:</p>
@@ -149,6 +203,15 @@
             </div>
         </div>
     </section>
+    <div class="fixed bottom-5 right-5">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/7060783267" target="_blank"
+            class="bg-green-500 text-white p-3 rounded-full shadow-lg flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="w-6 h-6 mr-2">
+            Chat on WhatsApp
+        </a>
+    </div>
     <!-- Updated: Footer with more navigation links -->
     <footer class="bg-blue-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4">
